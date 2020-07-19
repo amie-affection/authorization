@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 import withAuth from "../../hoc/withAuth";
 import { useDispatch } from "react-redux";
-import loginOperations from '../../redux/auth/authReducer';
+import {loginOperations} from '../../redux/auth/authReducer';
 
 const AuthPage = () => {
   const dispatch = useDispatch();
 
   const [login, setLogin] = useState("");
-  const [password, setPassword] = useState("");
-
   const changeLogin = ({ target }) => setLogin(target.value);
+
+  const [password, setPassword] = useState("");
   const changePassword = ({ target }) => setPassword(target.value);
 
   const handleSubmit = (e) => {
@@ -28,7 +28,7 @@ const AuthPage = () => {
         style={{ marginLeft: "20px", marginRight: "10px", height: "25px" }}
       />
       <input
-        type="text"
+        type="password"
         value={password}
         onChange={changePassword}
         placeholder="Password"
