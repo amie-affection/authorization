@@ -70,7 +70,19 @@ const Header = ({ token, makeLogout }) => {
       </nav>
 
       {token && (
-        <button type="button" onClick={logout}>
+        <button
+          type="button"
+          onClick={logout}
+          style={{
+            marginLeft: "38px",
+            border: "none",
+            width: "108px",
+            height: "30px",
+            backgroundColor: "black",
+            color: "white",
+            fontWeight: "bold",
+          }}
+        >
           Logout
         </button>
       )}
